@@ -32,7 +32,16 @@ class App(ctk.CTk):
         self.minsize(600, 450)
 
         if sys.platform.startswith("win"):
-            self.iconbitmap("LE2.ico")
+            try:
+                if hasattr(sys, "_MEIPASS"):
+                    iconPath = os.path.join(sys._MEIPASS, "LE2.ico")
+                else:
+                    iconPath = os.path.join(os.path.dirname(__file__), "LE2.ico")
+
+                self.iconbitmap(iconPath)
+            except Exception:
+                pass
+
 
         self.filePath = None
         self.inputExt = None
