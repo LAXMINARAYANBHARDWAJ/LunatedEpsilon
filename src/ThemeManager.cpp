@@ -3,6 +3,7 @@
 
 #include <QApplication>
 #include <QStyleFactory>
+#include <QStyle>
 
 Q_LOGGING_CATEGORY(lcTheme, "le.theme")
 
@@ -23,7 +24,7 @@ void ThemeManager::applyTheme(Theme theme)
     if (theme == Theme::System) {
         // Restore default palette and clear stylesheet override
         QApplication::setPalette(QApplication::style()->standardPalette());
-        QApplication::setStyleSheet(QString{});
+        QApplication::instance()->setStyleSheet(QString{});
     } else {
         QPalette palette;
 
@@ -35,7 +36,7 @@ void ThemeManager::applyTheme(Theme theme)
         }
 
         QApplication::setPalette(palette);
-        QApplication::setStyleSheet(buildStyleSheet(theme));
+        QApplication::instance()->setStyleSheet(buildStyleSheet(theme));
     }
 
     emit themeChanged(theme);
