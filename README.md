@@ -130,4 +130,4 @@ pip install customtkinter
 
 **License:** [Unicense license](https://unlicense.org/)
 
-Logo: Greek Lunate Epsilon UTF encoding "U+03F5"
+Logo: Greek Lunate Epsilon Unicode character "U+03F5"
