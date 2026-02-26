@@ -15,9 +15,9 @@ int main(int argc, char* argv[])
     );
 
     QApplication app(argc, argv);
-    app.setApplicationName("LunatedEpsilon");
-    app.setApplicationVersion("1.0.0");
-    app.setOrganizationName("LunatedEpsilon");
+    app.setApplicationName("LunateEpsilon");
+    app.setApplicationVersion("2.0.0");
+    app.setOrganizationName("LunateEpsilon");
 
 #ifdef LE_DEBUG
     QLoggingCategory::setFilterRules(

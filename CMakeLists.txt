@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25)
 
-project(LunatedEpsilon
+project(LunateEpsilon
     VERSION 2.0.0
     LANGUAGES CXX
 )
@@ -33,15 +33,15 @@ set(RESOURCES
     resources/resources.qrc
 )
 
-add_executable(LunatedEpsilon WIN32
+add_executable(LunateEpsilon WIN32
     ${SOURCES}
     ${HEADERS}
     ${RESOURCES}
 )
 
-target_include_directories(LunatedEpsilon PRIVATE src)
+target_include_directories(LunateEpsilon PRIVATE src)
 
-target_link_libraries(LunatedEpsilon PRIVATE
+target_link_libraries(LunateEpsilon PRIVATE
     Qt6::Widgets
     Qt6::Concurrent
     dwmapi          # DWM shadow preservation
@@ -49,7 +49,7 @@ target_link_libraries(LunatedEpsilon PRIVATE
 
 # MSVC-specific flags
 if(MSVC)
-    target_compile_options(LunatedEpsilon PRIVATE
+    target_compile_options(LunateEpsilon PRIVATE
         /W4
         /WX-            # Warnings not treated as errors during development
         /permissive-    # Strict conformance
@@ -57,7 +57,7 @@ if(MSVC)
         /utf-8          # UTF-8 source and execution charset
     )
     # Suppress MSVC warnings about Qt internals
-    target_compile_definitions(LunatedEpsilon PRIVATE
+    target_compile_definitions(LunateEpsilon PRIVATE
         _SILENCE_ALL_CXX17_DEPRECATION_WARNINGS
         NOMINMAX
         WIN32_LEAN_AND_MEAN
@@ -65,7 +65,7 @@ if(MSVC)
 endif()
 
 # Debug vs Release
-target_compile_definitions(LunatedEpsilon PRIVATE
+target_compile_definitions(LunateEpsilon PRIVATE
     $<$<CONFIG:Debug>:LE_DEBUG>
     $<$<CONFIG:Release>:QT_NO_DEBUG_OUTPUT>
 )
