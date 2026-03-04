@@ -1,12 +1,7 @@
 <!DOCTYPE RCC>
-<RCC>
+<RCC version="1.0">
     <qresource prefix="/">
-        
-        <!-- Application Icon -->
-        <file>icons/LEw256.ico</file>
-
-        <!-- Add additional icons below -->
-        <!-- <file>icons/your_icon.png</file> -->
-
+        <file alias="icons/LEwX.ico">icons/LEwX.ico</file>
+        <file alias="icons/LEbX.ico">icons/LEbX.ico</file>
     </qresource>
 </RCC>
