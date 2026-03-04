@@ -27,6 +27,8 @@ signals:
     void themeChanged(Theme theme);
 
 private:
+    void captureSystemDefaults();
+
     QPalette buildLightPalette() const;
     QPalette buildDarkPalette() const;
     QPalette buildAmoledPalette() const;
@@ -34,6 +36,11 @@ private:
     QString buildStyleSheet(Theme theme) const;
 
     Theme m_current = Theme::System;
+
+    bool    m_capturedSystemDefaults = false;
+    QString m_systemStyleName;
+    QPalette m_systemPalette;
+    QString m_systemStyleSheet;
 };
 
 } // namespace LE

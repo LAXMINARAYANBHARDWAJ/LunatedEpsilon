@@ -26,7 +26,7 @@ static constexpr int kTitleBarHeight    = 36;
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent)
 {
-    setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    setWindowFlags(Qt::Window);
     setAttribute(Qt::WA_TranslucentBackground, false);
     resize(760, 560);
     setMinimumSize(600, 450);

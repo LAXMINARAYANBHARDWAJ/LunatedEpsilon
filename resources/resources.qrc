@@ -1,7 +1,12 @@
 <!DOCTYPE RCC>
-<RCC version="1.0">
+<RCC>
     <qresource prefix="/">
-        <!-- Icons and assets will be embedded here -->
-        <!-- Example: <file alias="icon.ico">icons/LE2.ico</file> -->
+        
+        <!-- Application Icon -->
+        <file>icons/LEw256.ico</file>
+
+        <!-- Add additional icons below -->
+        <!-- <file>icons/your_icon.png</file> -->
+
     </qresource>
 </RCC>

@@ -1,6 +1,5 @@
 #include "Converter.h"
 #include "Logger.h"
-
 #include <QFile>
 #include <QTextStream>
 #include <QFileInfo>
