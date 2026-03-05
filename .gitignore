@@ -44,3 +44,7 @@ build/
 
 #vscode
 .vscode/
+
+#project files
+LunateEpsilon Project Context.md
+Commands.txt
